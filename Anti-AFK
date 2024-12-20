@@ -1,0 +1,73 @@
+wait(0.5)
+local ba = Instance.new("ScreenGui")
+local mainFrame = Instance.new("Frame")
+local mainFrameCorner = Instance.new("UICorner")
+local titleLabel = Instance.new("TextLabel")
+local statusLabel = Instance.new("TextLabel")
+local creatorLabel = Instance.new("TextLabel")
+local titleCorner = Instance.new("UICorner")
+local statusCorner = Instance.new("UICorner")
+local creatorCorner = Instance.new("UICorner")
+
+local bb = game:GetService("VirtualUser")
+
+game:GetService("Players").LocalPlayer.Idled:Connect(function()
+    bb:CaptureController()
+    bb:ClickButton2(Vector2.new())
+    statusLabel.Text = "Roblox Tried to kick you but we didn't let them kick you :D"
+    wait(2)
+    statusLabel.Text = "Status: Active"
+end)
+
+ba.Parent = game.CoreGui
+ba.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+mainFrame.Parent = ba
+mainFrame.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+mainFrame.BorderSizePixel = 0 
+mainFrame.Position = UDim2.new(0.5, -210, 0.3, 0) 
+mainFrame.Size = UDim2.new(0, 420, 0, 160) 
+mainFrame.Active = true
+mainFrame.Draggable = true 
+mainFrameCorner.Parent = mainFrame
+mainFrameCorner.CornerRadius = UDim.new(0, 40) 
+titleLabel.Parent = mainFrame
+titleLabel.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2) 
+titleLabel.BorderSizePixel = 0 
+titleLabel.Size = UDim2.new(1, 0, 0.33, 0) 
+titleLabel.Font = Enum.Font.GothamBold
+titleLabel.Text = "Anti AFK Script"
+titleLabel.TextColor3 = Color3.new(1, 1, 1) 
+titleLabel.TextSize = 24
+titleLabel.TextWrapped = true
+titleLabel.TextXAlignment = Enum.TextXAlignment.Center
+titleLabel.TextYAlignment = Enum.TextYAlignment.Center
+titleCorner.Parent = titleLabel
+titleCorner.CornerRadius = UDim.new(0, 40) 
+statusLabel.Parent = mainFrame
+statusLabel.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2) 
+statusLabel.BorderSizePixel = 0 
+statusLabel.Position = UDim2.new(0, 0, 0.33, 0) 
+statusLabel.Size = UDim2.new(1, 0, 0.33, 0) 
+statusLabel.Font = Enum.Font.SourceSans
+statusLabel.Text = "Status: Active"
+statusLabel.TextColor3 = Color3.new(1, 0, 0) 
+statusLabel.TextSize = 22 
+statusLabel.TextWrapped = true
+statusLabel.TextXAlignment = Enum.TextXAlignment.Center
+statusLabel.TextYAlignment = Enum.TextYAlignment.Center
+statusCorner.Parent = statusLabel
+statusCorner.CornerRadius = UDim.new(0, 40) 
+creatorLabel.Parent = mainFrame
+creatorLabel.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2) 
+creatorLabel.BorderSizePixel = 0 
+creatorLabel.Position = UDim2.new(0, 0, 0.66, 0) 
+creatorLabel.Size = UDim2.new(1, 0, 0.34, 0) 
+creatorLabel.Font = Enum.Font.SourceSansItalic
+creatorLabel.Text = "Created by Eldenis"
+creatorLabel.TextColor3 = Color3.new(1, 1, 1) 
+creatorLabel.TextSize = 20 
+creatorLabel.TextWrapped = true
+creatorLabel.TextXAlignment = Enum.TextXAlignment.Center
+creatorLabel.TextYAlignment = Enum.TextYAlignment.Center
+creatorCorner.Parent = creatorLabel
+creatorCorner.CornerRadius = UDim.new(0, 40)
